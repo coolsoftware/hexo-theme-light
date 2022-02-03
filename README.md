@@ -1,6 +1,6 @@
 # Light
 
-A simple theme for [Hexo].
+A simple theme for [Hexo](https://hexo.io/).
 
 It has been forked from https://github.com/hexojs/hexo-theme-light
 
