@@ -4,11 +4,19 @@ A simple theme for [Hexo](https://hexo.io/).
 
 It has been forked from https://github.com/hexojs/hexo-theme-light
 
+## Install
+
+Execute the following command and modify `theme` in `_config.yml` to `light-plus`.
+
+``` bash
+git clone --depth 1 https://github.com/coolsoftware/hexo-theme-light-plus themes/light-plus
+```
+
 For basic installation and configuration instructions please refer to original repository.
 
 ## New Widgets
 
-3 widgets has been added: `archive`, `favoriteposts`, `githublink`. You can turn them on and configure in theme config:
+3 widgets has been added: `archive`, `favoriteposts`, `githublink`. You can turn them on and configure in theme `_config.yml`:
 
 ``` yaml
 widgets:
