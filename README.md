@@ -26,7 +26,7 @@ favorite_posts:
 
 ## Title Image
 
-You can use image in the blog title. Placee your image file (e.g, `title-image.png`) into `source/images` folder and add to `_config.yml`:
+You can use image in the blog title. Place your image file (e.g, `title-image.png`) into `source/images` folder and add to `_config.yml`:
 
 ``` yaml  
 title:
