@@ -1,4 +1,4 @@
-# Light
+# Light Plus
 
 A simple theme for [Hexo](https://hexo.io/).
 
