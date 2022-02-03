@@ -2,120 +2,37 @@
 
 A simple theme for [Hexo].
 
-## Install
+It has been forked from https://github.com/hexojs/hexo-theme-light
 
-Execute the following command and modify `theme` in `_config.yml` to `light`.
+For basic installation and configuration instructions please refer to original repository.
 
-```
-git clone --depth 1 https://github.com/hexojs/hexo-theme-light themes/light
-```
+## New Widgets
 
-``` diff
-_config.yml
-- theme: some-theme
-+ theme: light
-```
-
-## Update
-
-Execute the following command to update Light.
-
-```
-cd themes/light
-git pull
-```
-
-## Config
-
-Default config:
+3 widgets has been added: `archive`, `favoriteposts`, `githublink`. You can turn them on and configure in theme config:
 
 ``` yaml
-menu:
-  Home: /
-  Archives: /archives
-
 widgets:
-- search
-- category
-- tag
-- twitter
+- archive
+- favoriteposts
+- githublink
 
-excerpt_link: Read More
+githublink: https://github.com/coolsoftware/
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
-
-addthis:
-  enable: true
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
-
-fancybox: true
-
-google_analytics:
-rss:
+favorite_posts:
+-
+  name: Useful Links
+  url: tags/useful-links/
 ```
 
-- **menu** - Main navigation menu
-- **widget** - Widgets displaying in sidebar
-- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **twitter** - Twitter widget config
-  - **username** - Twitter username
-  - **show_replies** - Enable displaying replies
-  - **tweet_count** - Tweets display in widget
-- **addthis** - Share buttons at the bottom of articles (Powered by [AddThis])
-  - **enable** - Enable share buttons
-  - **pubid** - Profile ID of [AddThis]
-  - **facebook** - Enable Facebook button
-  - **twitter** - Enable Twitter button
-  - **google** - Enable Google+ button
-  - **pinterest** - Enable Pinterest button
-- **fancybox** - Enable [Fancybox]
-- **google_analytics** - Google Analytics ID
-- **rss** - RSS subscription link (change if using Feedburner)
+## Title Image
 
-## Features
+You can use image in the blog title. Placee your image file (e.g, `title-image.png`) into `source/images` folder and add to `_config.yml`:
 
-### Gallery Post
-
-![Gallery Post](https://raw.githubusercontent.com/hexojs/hexo-theme-light/site/source/screenshots/gallery-post.gif)
-
-```
----
-layout: photo
-title: Gallery Post
-photos:
-- https://i.postimg.cc/c49xRqRP/1.jpg
-- https://i.postimg.cc/288jLjZ4/2.jpg
-- https://i.postimg.cc/T2cYP5pd/3.jpg
----
+``` yaml  
+title:
+  image: images/title-image.png
 ```
 
-### Link Post
+## Archives Navigation
 
-![Link Post](https://raw.githubusercontent.com/hexojs/hexo-theme-light/site/source/screenshots/link-post.gif)
-
-```
----
-layout: link
-title: Link Post
-link: http://www.google.com/
----
-```
-
-### Tweet Widget
-
-![Tweet Widget](https://raw.githubusercontent.com/hexojs/hexo-theme-light/site/source/screenshots/tweet-widget.gif)
-
-### Fancybox
-
-![Fancybox](https://raw.githubusercontent.com/hexojs/hexo-theme-light/site/source/screenshots/fancybox.gif)
-
-[Hexo]: http://zespia.tw/hexo/
-[AddThis]: https://www.addthis.com
-[Fancybox]: http://fancyapps.com/fancybox/
+Blog archive navigation menu has been added. You can choose year and month.
