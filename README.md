@@ -35,4 +35,7 @@ title:
 
 ## Archives Navigation
 
-Blog archive navigation menu has been added. You can choose year and month.
+Blog archive navigation menu has been added. You can choose year and month:
+
+![blog-archive-navigation](https://user-images.githubusercontent.com/1533483/152324256-978c2cbe-05e8-480c-8a34-75107d5125f4.png)
+
