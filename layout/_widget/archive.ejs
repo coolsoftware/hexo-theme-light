@@ -1,0 +1,45 @@
+<% 
+  var archiveDir = 'archives';
+  var posts = site.posts.sort('date', -1);
+  var data = [];
+  var length = 0;
+  
+  function link(item){
+    var url = archiveDir + '/' + item.year + '/';
+    if (item.month < 10) url += '0';
+    url += item.month + '/';
+    return url_for(url);
+  }
+  
+  posts.forEach(function(post){
+    // Clone the date object to avoid pollution
+    var post_date = post.date.clone();
+    var year = post_date.year();
+    var month = post_date.month() + 1;
+    var name = date(post_date, 'MMMM YYYY');
+    var lastData = data[length-1];
+    if (!lastData || lastData.name !== name){
+      length = data.push({
+        name: name,
+        year: year,
+        month: month,
+        count: 1
+      });
+    } else {
+      lastData.count++;
+    }
+  });
+  var item, i, len; 
+  %>
+  
+  <% if (site.posts.length){ %>
+  <div class="widget tag">
+    <h3 class="title"><%= __('archive_a') %></h3>
+	<ul class="entry">
+	  <% for (i = 0, len = data.length; i < len; i++){ %>
+        <% item = data[i]; %>
+        <li><a href="<%- link(item) %>"><%= item.name %></a><small><%= item.count %></small></li>
+      <% } %>
+    </ul>
+  </div>
+<% } %>

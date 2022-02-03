@@ -1,11 +1,38 @@
+title:
+  image: images/coolsoftware-blog.png
+
+githublink: https://github.com/coolsoftware/
+
+favorite_posts:
+- 
+  name: Полезные ссылки
+  url: tags/полезные-ссылки/
+- 
+  name: Howto
+  url: tags/howto/
+- 
+  name: Хобби
+  url: tags/хобби/
+- 
+  name: Поиск подстрок с помощью дерева цифрового поиска
+  url: tags/trie/
+- 
+  name: Дерево Интервалов (Отрезков)
+  url: tags/дерево-интервалов/
+- 
+  name: Throttling
+  url: tags/throttling/
+
 menu:
-  Home:
+  Home: /
   Archives: archives
 
 widgets:
+- githublink
+- favoriteposts
 - search
 - category
-- tag
+- tagcloud
 
 excerpt_link: Read More
 
@@ -15,7 +42,7 @@ twitter:
   tweet_count: 5
 
 addthis:
-  enable: true
+  enable: false
   pubid:
   facebook: true
   twitter: true
@@ -27,7 +54,7 @@ fancybox: true
 google_analytics:
 rss:
 
-comment_provider: facebook
+comment_provider: 
 # Facebook comment
 facebook:
   appid: 123456789012345

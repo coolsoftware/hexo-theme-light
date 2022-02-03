@@ -1,0 +1,19 @@
+<%
+function favoritePosts(posts) {
+    posts.forEach(post => {
+        if (post.name && post.url) %>
+<div>
+    <a href="<%- url_for(post.url) %>"><%= post.name %></a>
+</div>
+<%
+    });
+}
+%>
+<% if (theme.favorite_posts) { %>
+<div class="widget tag">
+    <h3 class="title"><%= __('favorites') %></h3>
+    <div class="entry">
+        <%- favoritePosts(theme.favorite_posts) %>
+    </div>
+</div>
+<% } %>

@@ -1,0 +1,8 @@
+<% if (theme.githublink) { %>
+<div class="widget tag">
+    <div class="githublink">
+        <div class="icon"></div>
+        <a href="<%= theme.githublink %>"><%= theme.githublink.replaceAll(/^https?:\/\/|\/$/ig, '') %></a>
+    </div>
+</div>
+<% } %>

@@ -1,13 +1,41 @@
 <%
+var current_year = page.posts.length > 0 ? page.posts.data[0].date.year() : new Date().getFullYear();
 var title = '';
 if (page.category) title = page.category;
 if (page.tag) title = page.tag;
 if (page.archive){
-  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+  if (page.year) title = page.year + (page.month ? '/' + ('0'+page.month).slice(-2) : '');
   else title = __('archive_a');
 }
 %>
+
 <h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><%= title %></h2>
+
+<% if (page.archive) { 
+  let years = new Set();
+  let months = new Set();
+  site.posts.each(function(item) {
+    years.add(item.date.year());
+    if (item.date.year() == current_year) {
+      months.add(item.date.month()+1);
+    }
+  });
+%>
+  <div id="archive-year-container"><%
+    Array.from(years).sort((a, b) => (b > a ? 1 : a > b ? -1 : 0)).forEach(year => { 
+      let year_name = (year == page.year ? '<b>'+year+'</b>' : year); %> 
+      <a href="<%- url_for([config.archive_dir, year].join('/')) %>"><%- year_name %></a>
+    <% });  
+  %></div>
+  <div id="archive-month-container"><%
+    Array.from(months).sort((a, b) => (b > a ? -1 : a > b ? 1 : 0)).forEach(m => {
+      let month = ('0'+m).slice(-2); 
+      let month_name = date(current_year + '-' + month + '-01T00:00:00', 'MMMM'); 
+      if (page.month == m) month_name = '<b>' + month_name + '</b>'; %>
+      <a href="<%- url_for([config.archive_dir, current_year, month].join('/')) %>"><%- month_name %></a>
+    <% });
+  %></div>
+<% } %>
 
 <% if (pagination == 2){ %>
   <% page.posts.each(function(item){ %>
