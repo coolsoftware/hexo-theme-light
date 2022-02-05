@@ -14,6 +14,10 @@ git clone --depth 1 https://github.com/coolsoftware/hexo-theme-light-plus themes
 
 For basic installation and configuration instructions please refer to original repository.
 
+## Demo
+
+https://blog.coolsoftware.ru/
+
 ## New Widgets
 
 3 widgets has been added: `archive`, `favoriteposts`, `githublink`. You can turn them on and configure in theme `_config.yml`:
