@@ -1,7 +1,11 @@
 title:
   image: images/coolsoftware-blog.png
 
-githublink: https://github.com/coolsoftware/
+contact_links:
+-
+  github: https://github.com/coolsoftware/
+-
+  mailto: vitalyyakovlev777@gmail.com
 
 favorite_posts:
 - 
@@ -28,7 +32,7 @@ menu:
   Archives: archives
 
 widgets:
-- githublink
+- contactlinks
 - favoriteposts
 - search
 - category

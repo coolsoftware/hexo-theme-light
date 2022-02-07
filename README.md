@@ -20,15 +20,21 @@ https://blog.coolsoftware.ru/
 
 ## New Widgets
 
-3 widgets has been added: `archive`, `favoriteposts`, `githublink`. You can turn them on and configure in theme `_config.yml`:
+3 widgets has been added: `archive`, `favoriteposts`, `contactlinks`. You can turn them on and configure in theme `_config.yml`:
 
 ``` yaml
 widgets:
 - archive
 - favoriteposts
-- githublink
+- contactlinks
 
-githublink: https://github.com/coolsoftware/
+contact_links:
+-
+  github: https://github.com/coolsoftware/
+-
+  mailto: emailme@gmail.com
+-
+  url: https://google.com/
 
 favorite_posts:
 -
