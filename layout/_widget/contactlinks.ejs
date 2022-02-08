@@ -1,0 +1,30 @@
+<%
+function contactLinks(contacts) {
+    contacts.forEach(contact => {
+        if (contact.github) { %>
+<div class="contactlink githublink">
+    <div class="icon"></div>
+    <a href="<%= contact.github %>"><%= contact.name || contact.github.replaceAll(/^https?:\/\/|\/$/ig, '') %></a>
+</div>
+<%      } else if (contact.url) { %>
+<div class="contactlink urllink">
+    <div class="icon"></div>
+    <a href="<%- url_for(contact.url) %>"><%= contact.name || contact.url.replaceAll(/^https?:\/\/|\/$/ig, '') %></a>
+</div>
+<%      } else if (contact.mailto) { %>
+<div class="contactlink mailtolink">
+    <div class="icon"></div>
+    <a href="<%- 'mailto:'+contact.mailto %>"><%= contact.name || contact.mailto %></a>
+</div>
+<%      }
+    });
+}
+%>
+<% if (theme.contact_links) { %>
+<div class="widget tag">
+    <h3 class="title"><%= __('contacts') %></h3>
+    <div class="entry">
+        <%- contactLinks(theme.contact_links) %>
+    </div>
+</div>
+<% } %>
