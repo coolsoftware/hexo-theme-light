@@ -30,6 +30,7 @@ favorite_posts:
 menu:
   Home: /
   Archives: archives
+  RSS: atom.xml
 
 widgets:
 - contactlinks

@@ -59,6 +59,11 @@ if (page.archive){
               <h1 class="title"><a href="<%- url_for(item.path) %>"><%= item.title %></a></h1>
             <% } %>
           </header>
+          <footer>
+            <%- partial('post/category', {item: item}) %>
+            <%- partial('post/tag', {item: item}) %>
+            <%- partial('post/share', {item: item}) %>      
+          </footer>
         </div>
       </article>
     <% }); %>
