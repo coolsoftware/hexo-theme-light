@@ -11,3 +11,5 @@ archive_b: "Архив: %s"
 page: Страница %d
 favorites: Избранные сообщения
 contacts: Контакты
+searching: Поиск...
+results_found: результатов найдено

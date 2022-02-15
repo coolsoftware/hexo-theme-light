@@ -10,7 +10,30 @@
   <nav id="main-nav" class="alignright">
     <ul>
       <% for (var i in theme.menu){ %>
-        <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+        <%
+          var menuitem = theme.menu[i];
+          var menutitle = i;
+          var menulink = '';
+          var menuicon = '';
+          var menuclass = '';
+          var menutarget = '';
+          if (typeof(menuitem) === 'object') {
+            menutitle = menuitem.title || '';
+            menulink = menuitem.link || '';
+            menutarget = menuitem.target || ''; 
+            if (menuitem.target) {
+              menutarget = ' target="' + escape(menuitem.target) + '"';
+            }
+            if (menuitem.icon) {
+              menuicon = '<span class="menuicon">' + menuitem.icon +'</span>';
+            }
+          }
+          else 
+          if (typeof(menuitem) === 'string') {
+            menulink = menuitem;
+          }
+        %>
+        <li><a href="<%- url_for(menulink) %>"<%- menutarget %>><%- menuicon %><%= menutitle %></a></li>
       <% } %>
     </ul>
     <div class="clearfix"></div>

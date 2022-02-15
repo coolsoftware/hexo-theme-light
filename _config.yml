@@ -30,12 +30,17 @@ favorite_posts:
 menu:
   Home: /
   Archives: archives
-  RSS: atom.xml
+  Search:
+    icon: "\uf002"
+    link: search
+  RSS: 
+    icon: "\uf09e"
+    link: atom.xml
+    target: _blank
 
 widgets:
 - contactlinks
 - favoriteposts
-- search
 - category
 - tagcloud
 
