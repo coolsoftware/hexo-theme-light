@@ -1,0 +1,23 @@
+<%
+var title = page.title || __('search');
+%>
+<h2 class="search-title"><%= title %></h2>
+<div class="search-box">
+    <div class="search-input-raw">
+        <div class="search-input-container">
+            <input autocomplete="off" autocorrect="off" autocapitalize="none"
+                placeholder="<%= __('searching') %>" spellcheck="false"
+                type="text" id="search-input">
+        </div>
+        <div class="search-icon"></div>
+    </div>
+    <div class="search-stats-raw" id="search-stats-container">
+        <span id="search-stats"></span> <%= __('results_found') %>.
+    </div>
+    <div class="search-pages-raw" id="search-pages-container">
+        <%= __('result_pages')+':' %> <span id="search-pages"></span>
+    </div>
+</div>
+<div id="search-result">
+</div>
+<%- js('js/local-search.js') %>

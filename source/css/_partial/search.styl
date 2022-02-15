@@ -1,0 +1,82 @@
+.search-title
+  color color-meta
+  font-weight normal
+  margin-bottom 30px
+  @media screen and (max-width: 600px)
+    margin-top 20px
+    margin-bottom 20px
+  text-shadow 0 0 1px #fff
+  &:before
+    font-family font-icon
+    content '\f002'
+    padding-right 15px
+
+.search-box
+  display flex
+  flex-direction column
+  background #fff
+  box-shadow 1px 2px 3px color-border
+  border-bottom 1px solid color-border
+  padding 15px
+  input
+    background #fff
+    font-family font-title
+    font-style italic
+    font-size 1em
+    padding 10px 15px
+    border 1px solid color-border
+    width 100%
+    box-sizing border-box
+    color color-meta
+    &:focus
+      color color-font
+
+.search-input-raw
+  flex-direction raw
+
+.search-input-container
+  flex 1
+
+.search-icon
+  margin auto auto auto 7px;
+  cursor pointer
+  &:after
+    font 24px font-icon
+    content '\f002'
+    padding-left 5px
+
+#search-result
+  margin-bottom 50px
+  @media screen and (max-width: 600px)
+    margin-bottom 5px
+  
+.search-result-item
+  box-shadow: 1px 2px 3px #ddd;
+  background: #fff;
+  padding: 15px;
+  margin-top: 5px;
+
+.search-result-title
+  font-size large
+  line-height 2em
+
+.search-input-raw
+  display: flex
+
+.search-stats-raw
+  color color-meta
+  padding-top 15px
+  visibility hidden
+  font-size medium
+  
+#search-stats
+  font-weight 700
+
+.search-pages-raw
+  color color-meta
+  padding-top 10px
+  visibility hidden
+  font-size medium
+
+.search-page-link
+  margin-right 5px
