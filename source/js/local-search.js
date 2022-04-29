@@ -315,8 +315,16 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  if (CONFIG.localsearch.preload) {
-    fetchData();
+  const queryString = (new URLSearchParams(window.location.search)).get('q');
+  if (queryString) {
+    input.value = queryString;
+  }
+
+  if (CONFIG.localsearch.preload || queryString) {
+    fetchData(() => {
+      document.getElementById('search-input').focus();
+      inputEventFunction();
+    });
   }
 
   const proceedSearch = () => {
@@ -331,13 +339,14 @@ window.addEventListener('DOMContentLoaded', () => {
   if (CONFIG.localsearch.trigger === 'auto') {
     input.addEventListener('input', inputEventFunction);
   } else {
-    document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
     input.addEventListener('keypress', event => {
       if (event.keyCode === 13) {
         inputEventFunction();
       }
     });
   }
+
+  document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
 
   const setActivePage = (page) => {
     for (let i = 0; i < pages.length; i++) {

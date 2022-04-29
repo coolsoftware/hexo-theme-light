@@ -8,6 +8,9 @@ contact_links:
   mailto: vitalyyakovlev777@gmail.com
 
 favorite_posts:
+-
+  name: Я против войны
+  url: /я-против-войны/
 - 
   name: Полезные ссылки
   url: tags/полезные-ссылки/
@@ -15,8 +18,8 @@ favorite_posts:
   name: Howto
   url: tags/howto/
 - 
-  name: Хобби
-  url: tags/хобби/
+  name: Музыка
+  url: 2021/01/blog-post/
 - 
   name: Поиск подстрок с помощью дерева цифрового поиска
   url: tags/trie/
@@ -28,8 +31,7 @@ favorite_posts:
   url: tags/throttling/
 
 menu:
-  Home: /
-  Archives: archives
+  Архив: archives
   Search:
     icon: "\uf002"
     link: search
