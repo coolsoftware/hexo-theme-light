@@ -6,6 +6,6 @@
             span.classList.replace(name, `hljs-${name}`);
           });
         });
-        element.parentElement.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i>!!!</div>');
+        //element.parentElement.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i></div>');
     });
 })();
