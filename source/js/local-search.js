@@ -167,7 +167,7 @@ window.addEventListener('DOMContentLoaded', () => {
           let slicesOfTitle = [];
           if (indexOfTitle.length !== 0) {
             let tmp = mergeIntoSlice(0, title.length, indexOfTitle, searchText);
-            searchTextCount += tmp.searchTextCountInSlice;
+            searchTextCount += tmp.searchTextCount;
             slicesOfTitle.push(tmp);
           }
 
@@ -189,7 +189,7 @@ window.addEventListener('DOMContentLoaded', () => {
               end = content.length;
             }
             let tmp = mergeIntoSlice(start, end, indexOfContent, searchText);
-            searchTextCount += tmp.searchTextCountInSlice;
+            searchTextCount += tmp.searchTextCount;
             slicesOfContent.push(tmp);
           }
 
