@@ -1,0 +1,17 @@
+<div id="gitalk-container" style="margin: 30px;"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '<%= gtConfig.clientID %>',
+        clientSecret: '<%= gtConfig.clientSecret %>',
+        repo: '<%= gtConfig.repo %>',
+        owner: '<%= gtConfig.owner %>',
+        admin: ['<%= gtConfig.admin %>'],
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+        pagerDirection: '<%= gtConfig.pagerDirection %>',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>

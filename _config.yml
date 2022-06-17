@@ -63,7 +63,8 @@ fancybox: true
 google_analytics:
 rss:
 
-comment_provider: 
+comment_provider: gitalk
+
 # Facebook comment
 facebook:
   appid: 123456789012345
