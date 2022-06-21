@@ -1,11 +1,11 @@
 (function() {
     let figure = document.querySelectorAll('figure.highlight');
     figure.forEach(element => {
-        element.querySelectorAll('.code .line span').forEach(span => {
-          span.classList.forEach(name => {
-            span.classList.replace(name, `hljs-${name}`);
-          });
-        });
+//        element.querySelectorAll('.code .line span').forEach(span => {
+//          span.classList.forEach(name => {
+//            span.classList.replace(name, `hljs-${name}`);
+//          });
+//        });
         element.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i></div>');
         const o = element.querySelector('.copy-btn');
         o.addEventListener("click", ()=> {
