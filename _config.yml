@@ -26,6 +26,9 @@ favorite_posts:
 - 
   name: Throttling
   url: tags/throttling/
+-
+  name: В одну строку
+  url: 2022/01/nodejs/
 
 menu:
   Архив: archives
